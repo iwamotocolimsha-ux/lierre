@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+<meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#122d5c">
+  <meta name="description" content="石川県金沢市・野々市市周辺の不動産売却、相続した実家、空き家、家財整理をまとめて無料相談。不動産査定と家財査定を一つの窓口で対応します。">
+  <title>金沢・野々市の不動産売却と家財査定をまとめて相談｜リエール不動産</title>
+  <style>
+    :root{
+      --navy:#122d5c;
+      --navy-dark:#0a1d40;
+      --cream:#f7f3ec;
+      --gold:#c89d4c;
+      --orange:#e6672b;
+      --orange-dark:#c94f19;
+      --text:#202733;
+      --muted:#68717d;
+      --line:#dfe4ea;
+      --white:#fff;
+      --success:#23744d;
+      --error:#b42318;
+      --shadow:0 18px 50px rgba(10,29,64,.12);
+      --radius:22px;
+      --container:1180px;
+      --header:76px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header) + 16px);overflow-x:hidden}
+    body{
+      margin:0;
+      color:var(--text);
+      background:#fff;
+      font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+      line-height:1.8;
+      letter-spacing:.02em;
+      overflow-x:hidden;
+      -webkit-font-smoothing:antialiased
+    }
+    body.menu-open{overflow:hidden}
+    img,svg{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button,input,select,textarea{font:inherit}
+    button{border:0}
+    h1,h2,h3,p{margin-top:0}
+    .container{width:min(calc(100% - 40px),var(--container));margin:auto}
+    .section{padding:96px 0}
+    .section.alt{background:var(--cream)}
+    .section.dark{color:#fff;background:
+      radial-gradient(circle at 12% 20%,rgba(200,157,76,.18),transparent 28%),
+      linear-gradient(135deg,var(--navy-dark),var(--navy))}
+    .heading{max-width:820px;margin:0 auto 48px;text-align:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:14px;color:var(--navy);font-size:.8rem;font-weight:900;letter-spacing:.12em}
+    .eyebrow:before{content:"";width:28px;height:2px;background:var(--gold)}
+    .dark .eyebrow{color:#f1d69b}
+    .title{margin-bottom:16px;color:var(--navy-dark);font-size:clamp(1.9rem,4vw,3rem);line-height:1.35}
+    .dark .title{color:#fff}
+    .lead{margin:0;color:var(--muted)}
+    .dark .lead{color:rgba(255,255,255,.78)}
+    .marker{background:linear-gradient(transparent 68%,rgba(200,157,76,.35) 0)}
+    .icon{width:1.25em;height:1.25em;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+
+    .header{
+      position:fixed;inset:0 0 auto;z-index:1000;height:var(--header);
+      background:rgba(255,255,255,.95);border-bottom:1px solid rgba(18,45,92,.08);
+      backdrop-filter:blur(14px);transition:.2s
+    }
+    .header.scrolled{box-shadow:0 10px 30px rgba(10,29,64,.1)}
+    .header-inner{width:min(calc(100% - 40px),1320px);height:100%;margin:auto;display:flex;align-items:center;gap:24px}
+    .logo{display:flex;align-items:center;flex:0 0 auto}
+    .logo img{width:220px;height:auto}
+    .nav{display:flex;align-items:center;gap:24px;margin-left:auto}
+    .nav a{font-size:.86rem;font-weight:800;white-space:nowrap}
+    .header-actions{display:flex;align-items:center;gap:12px}
+    .phone-link{display:flex;align-items:center;gap:8px;color:var(--navy);font-size:.78rem;font-weight:800}
+    .phone-link strong{display:block;font-size:1.08rem;letter-spacing:.03em}
+    .cta-small{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:999px;background:var(--orange);color:#fff;font-weight:900;box-shadow:0 9px 22px rgba(230,103,43,.25)}
+    .menu-btn{display:none;width:46px;height:46px;margin-left:auto;position:relative;background:#eef3f9;border-radius:12px;color:var(--navy)}
+    .menu-btn span{position:absolute;left:12px;width:22px;height:2px;background:currentColor;transition:.2s}
+    .menu-btn span:nth-child(1){top:15px}.menu-btn span:nth-child(2){top:22px}.menu-btn span:nth-child(3){top:29px}
+    .menu-btn[aria-expanded="true"] span:nth-child(1){top:22px;transform:rotate(45deg)}
+    .menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+    .menu-btn[aria-expanded="true"] span:nth-child(3){top:22px;transform:rotate(-45deg)}
+    .mobile-menu{display:none}
+
+    .hero{
+      min-height:760px;padding:calc(var(--header) + 74px) 0 90px;display:grid;align-items:center;position:relative;overflow:hidden;
+      background:linear-gradient(115deg,#fbf8f2 0%,#f4f7fb 100%)
+    }
+    .hero:before{content:"";position:absolute;right:-150px;top:70px;width:540px;height:540px;border-radius:50%;border:1px solid rgba(18,45,92,.1);box-shadow:0 0 0 70px rgba(18,45,92,.03),0 0 0 140px rgba(18,45,92,.02)}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(420px,.95fr);gap:70px;align-items:center;position:relative;z-index:2}
+    .hero-label{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;margin-bottom:20px;background:#fff;border:1px solid rgba(18,45,92,.1);border-radius:999px;color:var(--navy);font-size:.82rem;font-weight:900;box-shadow:0 7px 22px rgba(18,45,92,.08)}
+    .hero h1{margin-bottom:24px;color:var(--navy-dark);font-size:clamp(2.55rem,5.4vw,4.5rem);line-height:1.17;letter-spacing:-.025em}
+    .hero h1 small{display:block;margin-bottom:8px;color:#51413a;font-size:.46em;line-height:1.45;letter-spacing:.04em}
+    .accent{position:relative;z-index:1;display:inline-block}
+    .accent:after{content:"";position:absolute;z-index:-1;left:-4px;right:-4px;bottom:.08em;height:.28em;background:#f2dc76;transform:rotate(-1deg)}
+    .hero-lead{max-width:650px;margin-bottom:26px;color:#424b57;font-size:1.06rem;line-height:2}
+    .hero-lead strong{color:var(--navy)}
+    .checks{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px;padding:0;list-style:none}
+    .checks li{display:flex;align-items:center;gap:7px;padding:9px 13px;background:rgba(255,255,255,.9);border:1px solid rgba(18,45,92,.1);border-radius:10px;color:var(--navy);font-size:.84rem;font-weight:900}
+    .checks .icon{color:var(--success)}
+    .actions{display:flex;flex-wrap:wrap;gap:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 26px;border-radius:999px;font-weight:900;text-align:center;transition:.2s}
+    .btn:hover,.btn:focus-visible{transform:translateY(-2px)}
+    .btn.primary{color:#fff;background:var(--orange);box-shadow:0 14px 32px rgba(230,103,43,.25)}
+    .btn.primary:hover{background:var(--orange-dark)}
+    .btn.secondary{color:var(--navy);background:#fff;border:2px solid rgba(18,45,92,.16);box-shadow:0 10px 28px rgba(18,45,92,.08)}
+    .hero-note{margin:14px 0 0;color:var(--muted);font-size:.76rem}
+
+    .visual{position:relative;min-height:540px}
+    .visual-card{position:absolute;inset:36px 0 20px 34px;overflow:hidden;border-radius:38px 8px 38px 38px;background:linear-gradient(145deg,#fff,#eef3f9);border:1px solid rgba(18,45,92,.09);box-shadow:0 30px 80px rgba(10,29,64,.18)}
+    .visual-card:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(18,45,92,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(18,45,92,.035) 1px,transparent 1px);background-size:34px 34px}
+    .sun{position:absolute;right:45px;top:50px;width:82px;height:82px;border-radius:50%;background:#f3d768;box-shadow:0 0 0 18px rgba(243,215,104,.2)}
+    .house{position:absolute;right:55px;bottom:65px;width:330px;height:300px}
+    .roof{position:absolute;left:45px;top:10px;width:240px;height:240px;background:var(--navy);transform:rotate(45deg);border-radius:16px;box-shadow:12px 12px 0 rgba(200,157,76,.5)}
+    .body-house{position:absolute;left:45px;right:45px;bottom:0;height:190px;background:#fff;border:8px solid var(--navy);border-radius:4px 4px 16px 16px}
+    .door{position:absolute;right:35px;bottom:0;width:64px;height:112px;background:#d2a362;border:7px solid var(--navy);border-bottom:0;border-radius:8px 8px 0 0}
+    .window{position:absolute;left:40px;bottom:68px;width:74px;height:66px;background:#b8d3e3;border:7px solid var(--navy)}
+    .window:before,.window:after{content:"";position:absolute;background:var(--navy)}
+    .window:before{left:50%;top:0;width:5px;height:100%;transform:translateX(-50%)}
+    .window:after{left:0;top:50%;width:100%;height:5px;transform:translateY(-50%)}
+    .box{position:absolute;z-index:2;display:grid;place-items:center;border:4px solid var(--navy);background:#fff;border-radius:10px;box-shadow:7px 8px 0 rgba(18,45,92,.12)}
+    .box.one{left:40px;bottom:42px;width:100px;height:88px;transform:rotate(-4deg)}
+    .box.two{left:102px;bottom:122px;width:86px;height:76px;border-color:var(--gold);transform:rotate(4deg)}
+    .box.three{right:18px;bottom:22px;width:98px;height:84px;color:var(--orange)}
+    .tag{position:absolute;z-index:4;display:flex;align-items:center;gap:10px;padding:12px 15px;background:#fff;border:1px solid rgba(18,45,92,.1);border-radius:14px;box-shadow:var(--shadow);color:var(--navy);font-size:.82rem;font-weight:900}
+    .tag i{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font-style:normal}
+    .tag.a{top:0;left:0}.tag.b{right:-18px;top:135px}.tag.c{left:8px;bottom:0}
+    .license{position:absolute;z-index:5;right:24px;bottom:18px;padding:11px 14px;background:var(--navy-dark);color:#fff;border-radius:12px;font-size:.66rem;font-weight:800;box-shadow:var(--shadow)}
+    .license strong{display:block;color:#f2d28f;font-size:.77rem}
+
+    .trust{position:relative;z-index:3;margin-top:-38px}
+    .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden;background:#fff;border:1px solid rgba(18,45,92,.08);border-radius:20px;box-shadow:var(--shadow)}
+    .trust-item{min-height:102px;padding:22px 18px;display:flex;align-items:center;justify-content:center;gap:12px;color:var(--navy)}
+    .trust-item+.trust-item{border-left:1px solid var(--line)}
+    .trust-icon{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:#edf3fa}
+    .trust-item strong{display:block;font-size:.94rem}
+    .trust-item span{display:block;color:var(--muted);font-size:.72rem}
+
+    .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:980px;margin:auto}
+    .worry{display:flex;gap:18px;padding:26px;background:#fff;border:1px solid rgba(18,45,92,.09);border-radius:18px;box-shadow:0 8px 24px rgba(18,45,92,.07)}
+    .num{display:grid;place-items:center;width:48px;height:48px;flex:0 0 auto;border-radius:50%;background:#f7ecd6;color:var(--navy);font-size:.8rem;font-weight:900}
+    .worry h3{margin-bottom:7px;color:var(--navy-dark);font-size:1.06rem;line-height:1.55}
+    .worry p{margin:0;color:var(--muted);font-size:.88rem}
+    .notice{max-width:780px;margin:36px auto 0;padding:20px 24px;display:flex;align-items:center;justify-content:center;gap:12px;background:#fff;border:2px solid var(--gold);border-radius:16px;color:var(--navy);font-weight:900;text-align:center}
+
+    .compare-layout{display:grid;grid-template-columns:.82fr 1.18fr;gap:70px;align-items:center}
+    .points{display:grid;gap:12px;margin:26px 0 0;padding:0;list-style:none}
+    .points li{display:flex;gap:9px;align-items:flex-start;font-weight:800;font-size:.92rem}
+    .points .icon{color:var(--success);margin-top:3px}
+    .compare{display:grid;grid-template-columns:1fr 64px 1fr;align-items:stretch}
+    .compare-card{padding:28px;background:#f7f9fb;border:1px solid rgba(18,45,92,.09);border-radius:24px;box-shadow:var(--shadow)}
+    .compare-card.main{background:#fff;border:2px solid var(--gold)}
+    .pill{display:inline-flex;padding:5px 11px;margin-bottom:18px;border-radius:999px;background:#e9edf2;color:var(--muted);font-size:.74rem;font-weight:900}
+    .compare-card.main .pill{background:#f8edd8;color:var(--navy)}
+    .compare-card h3{margin-bottom:20px;color:var(--navy-dark);font-size:1.16rem}
+    .compare-list{display:grid;gap:11px;margin:0;padding:0;list-style:none}
+    .compare-list li{display:flex;align-items:center;gap:10px;min-height:56px;padding:12px 14px;background:#fff;border:1px solid var(--line);border-radius:11px;font-size:.86rem;font-weight:800}
+    .compare-card.main .compare-list li{background:#edf3fa;border-color:transparent}
+    .arrow{display:grid;place-items:center;color:var(--orange)}
+    .summary{margin-top:18px;padding:14px;border-radius:11px;background:var(--navy);color:#fff;font-size:.88rem;font-weight:900;text-align:center}
+
+    .service-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+    .service{position:relative;min-height:270px;padding:28px 24px;background:#fff;border:1px solid rgba(18,45,92,.09);border-radius:18px;box-shadow:0 8px 24px rgba(18,45,92,.07);overflow:hidden}
+    .service:after{content:"";position:absolute;right:-30px;bottom:-30px;width:110px;height:110px;border-radius:50%;background:#edf3fa}
+    .service-icon{display:grid;place-items:center;width:58px;height:58px;margin-bottom:21px;border-radius:18px;background:var(--navy);color:#fff;box-shadow:7px 7px 0 #f5ead4}
+    .service h3{margin-bottom:10px;color:var(--navy-dark);font-size:1.05rem}
+    .service p{position:relative;z-index:2;margin:0;color:var(--muted);font-size:.86rem}
+
+    .items-panel{overflow:hidden;background:#fff;border:1px solid rgba(18,45,92,.09);border-radius:24px;box-shadow:var(--shadow)}
+    .items{display:grid;grid-template-columns:repeat(6,1fr)}
+    .item{min-height:188px;padding:28px 14px;text-align:center;border-right:1px solid var(--line)}
+    .item:last-child{border-right:0}
+    .item-icon{display:grid;place-items:center;width:74px;height:74px;margin:0 auto 16px;border-radius:50%;background:#edf3fa;color:var(--navy)}
+    .item strong{display:block;color:var(--navy-dark)}
+    .item span{display:block;margin-top:5px;color:var(--muted);font-size:.7rem}
+    .items-note{display:flex;gap:11px;padding:20px 24px;background:#f8edd8;color:#505864;font-size:.82rem}
+
+    .scene-grid,.reason-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .scene{min-height:360px;padding:28px;display:flex;flex-direction:column;position:relative;overflow:hidden;border-radius:24px;background:var(--navy);color:#fff;box-shadow:var(--shadow)}
+    .scene:nth-child(2){background:#493b35}.scene:nth-child(3){background:#214b54}
+    .scene:before{content:"";position:absolute;right:-75px;top:-75px;width:200px;height:200px;border:34px solid rgba(255,255,255,.08);border-radius:50%}
+    .scene small{position:relative;z-index:2;color:rgba(255,255,255,.58);font-weight:900;letter-spacing:.1em}
+    .scene-icon{position:relative;z-index:2;display:grid;place-items:center;width:60px;height:60px;margin:30px 0 20px;border-radius:18px;background:#fff;color:var(--navy)}
+    .scene h3{position:relative;z-index:2;margin-bottom:13px;font-size:1.2rem}
+    .scene p{position:relative;z-index:2;margin:0;color:rgba(255,255,255,.77);font-size:.86rem}
+    .scene b{position:relative;z-index:2;margin-top:auto;padding-top:17px;border-top:1px solid rgba(255,255,255,.18);font-size:.8rem}
+
+    .reason{min-height:285px;padding:28px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:18px}
+    .reason small{display:block;margin-bottom:18px;color:#f0cf87;font-weight:900;letter-spacing:.1em}
+    .reason h3{margin-bottom:12px;font-size:1.1rem}
+    .reason p{margin:0;color:rgba(255,255,255,.75);font-size:.85rem}
+    .license-box{margin-top:30px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;background:#fff;color:var(--navy-dark);border-radius:18px;box-shadow:var(--shadow)}
+    .license-box strong{display:block}
+    .license-box span{color:var(--muted);font-size:.82rem}
+    .license-no{padding:9px 13px;background:#f8edd8;border-radius:10px;color:var(--navy);font-size:.84rem;font-weight:900}
+
+    .flow{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+    .step{text-align:center}
+    .step-num{display:grid;place-items:center;width:84px;height:84px;margin:0 auto 18px;border-radius:50%;background:var(--navy);color:#fff;border:7px solid #fff;box-shadow:0 0 0 2px var(--gold);font-size:.78rem;font-weight:900}
+    .step:nth-child(5) .step-num{background:var(--gold);box-shadow:0 0 0 2px var(--navy)}
+    .step h3{margin-bottom:7px;color:var(--navy-dark);font-size:.92rem}
+    .step p{margin:0;color:var(--muted);font-size:.74rem}
+    .flow-note{max-width:820px;margin:40px auto 0;padding:18px 22px;border-radius:14px;background:#edf3fa;color:var(--navy);font-size:.88rem;font-weight:900;text-align:center}
+
+    .empty-box{display:grid;grid-template-columns:1fr 380px;gap:40px;align-items:center;padding:54px;border-radius:24px;background:linear-gradient(135deg,var(--navy-dark),#1d4770);color:#fff;box-shadow:var(--shadow)}
+    .empty-box h2{margin-bottom:16px;font-size:clamp(1.7rem,3.3vw,2.55rem);line-height:1.45}
+    .empty-box p{margin:0;color:rgba(255,255,255,.77)}
+    .law-card{padding:27px;background:#fff;color:var(--text);border-radius:18px}
+    .law-card h3{margin-bottom:12px;color:var(--navy)}
+    .law-card p{color:var(--muted);font-size:.82rem}
+    .law-card small{display:block;color:#727a85;font-size:.68rem}
+
+    .faq-list{max-width:920px;margin:auto;display:grid;gap:12px}
+    details.faq{overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:14px}
+    details.faq[open]{box-shadow:0 8px 24px rgba(18,45,92,.07)}
+    .faq summary{position:relative;display:flex;align-items:center;gap:13px;min-height:76px;padding:19px 58px 19px 22px;cursor:pointer;list-style:none;color:var(--navy-dark);font-weight:900}
+    .faq summary::-webkit-details-marker{display:none}
+    .qa{display:grid;place-items:center;width:34px;height:34px;flex:0 0 auto;border-radius:50%;background:var(--navy);color:#fff;font-size:.8rem;font-weight:900}
+    .toggle{position:absolute;right:22px;width:24px;height:24px}
+    .toggle:before,.toggle:after{content:"";position:absolute;left:50%;top:50%;width:15px;height:2px;background:var(--navy);transform:translate(-50%,-50%)}
+    .toggle:after{transform:translate(-50%,-50%) rotate(90deg)}
+    details[open] .toggle:after{transform:translate(-50%,-50%)}
+    .answer{display:flex;gap:13px;padding:0 22px 22px}
+    .answer .qa{background:#f8edd8;color:var(--navy)}
+    .answer p{margin:2px 0 0;color:var(--muted);font-size:.88rem}
+
+    .contact{padding:104px 0;background:linear-gradient(160deg,#f7f3eb,#edf3fa)}
+    .contact-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:42px;align-items:start}
+    .contact-side{position:sticky;top:calc(var(--header) + 24px)}
+    .contact-side h2{margin-bottom:16px;color:var(--navy-dark);font-size:clamp(1.8rem,3.4vw,2.7rem);line-height:1.42}
+    .contact-side>p{color:var(--muted)}
+    .assurance{display:grid;gap:9px;margin:22px 0 26px;padding:0;list-style:none}
+    .assurance li{display:flex;align-items:center;gap:8px;color:var(--navy);font-size:.86rem;font-weight:900}
+    .phone-card{padding:23px;border-radius:18px;background:var(--navy);color:#fff;box-shadow:var(--shadow)}
+    .phone-card small{display:block;color:rgba(255,255,255,.7)}
+    .phone-card a{display:block;margin:4px 0;font-size:1.8rem;font-weight:900}
+    .phone-card p{margin:0;color:rgba(255,255,255,.66);font-size:.7rem}
+    .form-card{padding:36px;background:#fff;border:1px solid rgba(18,45,92,.09);border-radius:24px;box-shadow:var(--shadow)}
+    .progress{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:34px}
+    .progress-item{display:flex;flex-direction:column;align-items:center;gap:7px;color:#8a929d;font-size:.7rem;font-weight:900}
+    .progress-item b{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#edf0f4;color:#7c8490}
+    .progress-item.active{color:var(--navy)}.progress-item.active b{background:var(--orange);color:#fff}
+    .progress-item.done{color:var(--navy)}.progress-item.done b{background:var(--success);color:#fff}
+    .form-step{display:none}.form-step.active{display:block}
+    .form-step h3{margin-bottom:7px;color:var(--navy-dark);font-size:1.26rem}
+    .form-intro{margin-bottom:24px;color:var(--muted);font-size:.84rem}
+    .field{margin-bottom:22px}
+    .label{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:8px;color:var(--navy-dark);font-size:.86rem;font-weight:900}
+    .required,.optional{display:inline-flex;align-items:center;min-height:21px;padding:2px 7px;border-radius:5px;font-size:.62rem}
+    .required{background:var(--error);color:#fff}.optional{background:#edf0f4;color:var(--muted)}
+    input[type=text],input[type=tel],input[type=email],select,textarea{width:100%;min-height:52px;padding:11px 13px;border:1px solid #cfd5dd;border-radius:10px;background:#fff;color:var(--text);outline:none}
+    textarea{min-height:125px;resize:vertical}
+    input:focus,select:focus,textarea:focus{border-color:var(--navy);box-shadow:0 0 0 4px rgba(18,45,92,.1)}
+    .choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .choice-grid.three{grid-template-columns:repeat(3,1fr)}
+    .choice{position:relative}
+    .choice input{position:absolute;opacity:0}
+    .choice label{display:flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:10px 12px;background:#f8f9fb;border:1px solid #d6dbe2;border-radius:10px;color:#414954;font-size:.8rem;font-weight:900;text-align:center;cursor:pointer}
+    .choice label:before{content:"";width:16px;height:16px;flex:0 0 auto;border-radius:50%;border:2px solid #aeb6c1;background:#fff;box-shadow:inset 0 0 0 3px #fff}
+    .choice input:checked+label{background:#edf3fa;border-color:var(--navy);color:var(--navy)}
+    .choice input:checked+label:before{background:var(--navy);border-color:var(--navy)}
+    .row{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .error{display:none;margin-top:7px;color:var(--error);font-size:.73rem;font-weight:800}
+    .field.invalid .error{display:block}
+    .field.invalid input,.field.invalid select,.field.invalid textarea{border-color:var(--error);background:#fff2f1}
+    .form-nav{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+    .form-nav.end{justify-content:flex-end}
+    .form-nav button{min-width:150px;cursor:pointer}
+    .privacy{padding:17px;background:#f7f8fa;border:1px solid var(--line);border-radius:10px}
+    .privacy details{margin-bottom:12px}
+    .privacy summary{cursor:pointer;color:var(--navy);font-size:.78rem;font-weight:900}
+    .privacy p{margin:9px 0 0;color:var(--muted);font-size:.7rem}
+    .consent{display:flex;align-items:flex-start;gap:9px}
+    .consent input{width:20px;height:20px;margin-top:3px;accent-color:var(--navy)}
+    .consent label{font-size:.78rem;font-weight:800}
+    .review{display:grid;gap:12px;padding:20px;background:#f7f9fc;border:1px solid var(--line);border-radius:12px}
+    .review-row{display:grid;grid-template-columns:145px 1fr;gap:14px;padding-bottom:12px;border-bottom:1px dashed #d6dbe2}
+    .review-row:last-child{padding-bottom:0;border-bottom:0}
+    .review-row dt{color:var(--navy);font-size:.76rem;font-weight:900}
+    .review-row dd{margin:0;font-size:.82rem;overflow-wrap:anywhere}
+    .success{display:none;margin-bottom:22px;padding:16px;border-radius:10px;background:#eaf7f0;border:1px solid rgba(35,116,77,.22);color:var(--success);font-size:.82rem;font-weight:800}
+    .success.show{display:block}
+    .disclaimer{margin:14px 0 0;color:#7c8490;font-size:.65rem;text-align:center}
+
+    footer{background:#071936;color:#fff}
+    .footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;padding:60px 0 40px}
+    .footer-logo{width:230px;margin-bottom:20px;filter:brightness(0) invert(1);opacity:.93}
+    footer p{margin-bottom:5px;color:rgba(255,255,255,.7);font-size:.8rem}
+    .footer-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .footer-card{padding:20px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);border-radius:13px}
+    .footer-card small{display:block;color:rgba(255,255,255,.55)}
+    .footer-card strong,.footer-card a{display:block;font-size:.92rem}
+    .copyright{padding:18px 0;border-top:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.5);font-size:.68rem;text-align:center}
+    .mobile-fixed{display:none}
+
+    @media(max-width:1100px){
+      .nav{gap:15px}.nav a{font-size:.78rem}.phone-link{display:none}
+      .service-grid{grid-template-columns:repeat(2,1fr)}
+      .items{grid-template-columns:repeat(3,1fr)}
+      .item:nth-child(3){border-right:0}.item:nth-child(-n+3){border-bottom:1px solid var(--line)}
+      .flow{grid-template-columns:repeat(3,1fr);row-gap:32px}
+    }
+    @media(max-width:900px){
+      :root{--header:70px}
+      .section{padding:80px 0}
+      .nav,.header-actions{display:none}.menu-btn{display:block}
+      .mobile-menu{position:fixed;inset:var(--header) 0 0;z-index:999;padding:20px 20px 100px;background:rgba(255,255,255,.99);overflow-y:auto;opacity:0;visibility:hidden;transform:translateY(-8px);transition:.2s}
+      .mobile-menu.open{display:block;opacity:1;visibility:visible;transform:none}
+      .mobile-menu nav{display:grid;max-width:600px;margin:auto}
+      .mobile-menu nav a{display:flex;justify-content:space-between;align-items:center;min-height:58px;padding:10px 8px;border-bottom:1px solid var(--line);color:var(--navy);font-weight:900}
+      .mobile-menu nav a:after{content:"›";font-size:1.4rem}
+      .mobile-actions{display:grid;gap:10px;max-width:600px;margin:22px auto 0}
+      .hero-grid,.compare-layout,.contact-grid{grid-template-columns:1fr}
+      .hero{min-height:auto;padding-top:calc(var(--header) + 55px)}
+      .visual{width:min(100%,600px);margin:auto}
+      .trust-grid{grid-template-columns:repeat(2,1fr)}
+      .trust-item:nth-child(3){border-left:0;border-top:1px solid var(--line)}
+      .trust-item:nth-child(4){border-top:1px solid var(--line)}
+      .scene-grid,.reason-grid{grid-template-columns:1fr}
+      .contact-side{position:static}
+      .empty-box{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:700px){
+      body{padding-bottom:calc(66px + env(safe-area-inset-bottom))}
+      .container,.header-inner{width:min(calc(100% - 28px),var(--container))}
+      .section{padding:66px 0}
+      .heading{text-align:left;margin-bottom:34px}
+      .logo img{width:165px}
+      .hero{padding-top:calc(var(--header) + 38px);padding-bottom:62px}
+      .hero h1{font-size:clamp(2.15rem,11vw,3.2rem)}
+      .hero-lead{font-size:.93rem}
+      .checks{display:grid;grid-template-columns:repeat(2,1fr)}
+      .checks li{justify-content:center;font-size:.74rem;text-align:center}
+      .actions{display:grid}.btn{width:100%;min-height:56px}
+      .visual{min-height:410px}
+      .visual-card{inset:20px 0 12px 12px}
+      .house{transform:scale(.78);transform-origin:bottom right;right:-12px;bottom:20px}
+      .tag{padding:9px 10px;font-size:.65rem}.tag i{width:29px;height:29px}
+      .tag.b{right:-7px;top:95px}.tag.c{display:none}
+      .license{right:12px;bottom:10px;font-size:.55rem}
+      .trust{margin-top:-26px}.trust-grid{grid-template-columns:1fr 1fr}
+      .trust-item{min-height:100px;padding:16px 8px;flex-direction:column;text-align:center;gap:6px}
+      .trust-item span{display:none}.trust-item strong{font-size:.75rem}
+      .grid-2{grid-template-columns:1fr}.worry{padding:21px}
+      .notice{text-align:left;align-items:flex-start}
+      .compare{grid-template-columns:1fr;gap:14px}.arrow{transform:rotate(90deg)}
+      .service-grid{grid-template-columns:1fr}
+      .items{grid-template-columns:repeat(2,1fr)}
+      .item:nth-child(2n){border-right:0}.item:nth-child(3){border-right:1px solid var(--line)}
+      .item:nth-child(-n+4){border-bottom:1px solid var(--line)}
+      .license-box{align-items:flex-start;flex-direction:column;padding:21px}
+      .flow{grid-template-columns:1fr;gap:17px}
+      .step{display:grid;grid-template-columns:68px 1fr;column-gap:15px;text-align:left;align-items:center}
+      .step-num{grid-row:1/3;width:64px;height:64px;margin:0;border-width:5px}
+      .step h3{align-self:end;margin-bottom:2px}.step p{align-self:start}
+      .empty-box{padding:30px 22px}
+      .faq summary{padding:17px 48px 17px 16px;font-size:.86rem}
+      .answer{padding:0 16px 19px}
+      .contact{padding:68px 0}
+      .form-card{padding:24px 16px}
+      .choice-grid,.choice-grid.three,.row{grid-template-columns:1fr}
+      .choice label{justify-content:flex-start;text-align:left}
+      .form-nav{flex-direction:column-reverse}.form-nav.end{flex-direction:column}
+      .form-nav button{width:100%;min-width:0}
+      .review-row{grid-template-columns:1fr;gap:2px}
+      .footer-cards{grid-template-columns:1fr}
+      .mobile-fixed{position:fixed;inset:auto 0 0;z-index:1100;display:grid;grid-template-columns:.88fr 1.12fr;min-height:66px;padding-bottom:env(safe-area-inset-bottom);background:#fff;box-shadow:0 -8px 30px rgba(10,29,64,.16)}
+      .mobile-fixed a{display:flex;align-items:center;justify-content:center;gap:7px;min-height:66px;font-size:.8rem;font-weight:900}
+      .mobile-fixed .tel{color:var(--navy)}.mobile-fixed .form-link{background:var(--orange);color:#fff}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+    }
+  </style>
+</head>
+<body>
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M7.2 3.8 4.8 5.1c-.8.4-1.2 1.3-.9 2.2 1.8 5.8 6.3 10.3 12.1 12.1.9.3 1.8-.1 2.2-.9l1.3-2.4c.4-.8.2-1.7-.5-2.2l-2.7-1.9c-.6-.4-1.4-.4-2 .1l-1.5 1.2a14 14 0 0 1-3.1-3.1l1.2-1.5c.5-.6.5-1.4.1-2L9.4 4.3c-.5-.7-1.4-.9-2.2-.5Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M14 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.2 4.2L19 7"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8"/><path d="M5.5 9.5V21h13V9.5M9 21v-6h6v6"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="m4 7 8-4 8 4-8 4-8-4Z"/><path d="M4 7v10l8 4 8-4V7M12 11v10"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.5 3 7.8 7.5 9.5 4.5-1.7 7.5-5 7.5-9.5V6L12 3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M5 18.5 3.5 21l4.3-1.2c1.2.5 2.6.7 4.2.7 5 0 9-3.6 9-8s-4-8-9-8-9 3.6-9 8c0 2.3 1 4.4 2.7 5.8"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 5.7c-2-2.2-5.4-2.2-7.4 0L12 7.2l-1.4-1.5c-2-2.2-5.4-2.2-7.4 0-2.1 2.3-2.1 6 0 8.3L12 21l8.8-7c2.1-2.3 2.1-6 0-8.3Z"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V5l8-3v19M12 8h8v13M2 21h20"/><path d="M7 7h2M7 11h2M7 15h2M15 11h2M15 15h2"/></symbol>
+    <symbol id="i-chair" viewBox="0 0 24 24"><path d="M6 12V7a3 3 0 0 1 6 0v5M12 12V8a3 3 0 0 1 6 0v4"/><path d="M4 12h16v5H4zM6 17v4M18 17v4"/></symbol>
+    <symbol id="i-tv" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="m9 2 3 3 3-3M9 21h6"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></symbol>
+    <symbol id="i-vase" viewBox="0 0 24 24"><path d="M8 3h8M9 3c0 3 1 4 1 5 0 1-4 3-4 7 0 3 2 6 6 6s6-3 6-6c0-4-4-6-4-7 0-1 1-2 1-5"/><path d="M8 14c2 1 6 1 8 0"/></symbol>
+    <symbol id="i-picture" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m5 18 5-5 3 3 2-2 4 4"/></symbol>
+    <symbol id="i-dish" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="M4 20h16"/></symbol>
+    <symbol id="i-family" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 21v-3.5A4.5 4.5 0 0 1 7 13h2a4.5 4.5 0 0 1 4.5 4.5V21M14 14h2.5a4 4 0 0 1 4 4v3"/></symbol>
+    <symbol id="i-distance" viewBox="0 0 24 24"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M8.2 15.8 15.8 8.2M6 7V3h4M18 17v4h-4"/></symbol>
+    <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 21V5M21 21v-9H3v9M3 16h18"/><path d="M6 12V8h5a3 3 0 0 1 3 3v1"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2.8 20h18.4L12 3Z"/><path d="M12 9v5M12 17.5h.01"/></symbol>
+  </svg>
+
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a class="logo" href="https://lierre-estate.co.jp/" aria-label="リエール不動産株式会社 公式サイト">
+        <img src="https://lierre-estate.co.jp/wp-content/themes/estate/img/common/logo_header.png" alt="リエール不動産株式会社">
+      </a>
+      <nav class="nav" aria-label="ページ内メニュー">
+        <a href="#problems">お悩み</a>
+        <a href="#service">サービス</a>
+        <a href="#items">査定対象</a>
+        <a href="#flow">ご相談の流れ</a>
+        <a href="#faq">よくある質問</a>
+      </nav>
+      <div class="header-actions">
+        <a class="phone-link" href="tel:0762403339">
+          <svg class="icon"><use href="#i-phone"></use></svg>
+          <span>電話で相談<strong>076-240-3339</strong></span>
+        </a>
+        <a class="cta-small" href="#contact">無料相談</a>
+      </div>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav>
+      <a href="#problems">このようなお悩みはありませんか</a>
+      <a href="#service">不動産まるごと査定とは</a>
+      <a href="#items">査定できる家財の例</a>
+      <a href="#reasons">選ばれる理由</a>
+      <a href="#flow">ご相談の流れ</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <div class="mobile-actions">
+      <a class="btn primary" href="#contact">家と家財をまとめて無料相談</a>
+      <a class="btn secondary" href="tel:0762403339">076-240-3339</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-label"><svg class="icon"><use href="#i-heart"></use></svg>相続・空き家・住み替えのご相談に</div>
+          <h1><small>売るもの、残すもの、整理するもの。</small>実家も、家の中も。<br><span class="accent">窓口ひとつ</span>で整理できます。</h1>
+          <p class="hero-lead">不動産の売却査定と、家具・家電・骨董品などの家財査定をまとめて対応。<strong>「何から手をつければよいか分からない」段階から</strong>、一つずつ整理します。</p>
+          <ul class="checks">
+            <li><svg class="icon"><use href="#i-check"></use></svg>相談無料</li>
+            <li><svg class="icon"><use href="#i-check"></use></svg>査定だけでも可能</li>
+            <li><svg class="icon"><use href="#i-check"></use></svg>契約義務なし</li>
+            <li><svg class="icon"><use href="#i-check"></use></svg>秘密厳守</li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="#contact"><svg class="icon"><use href="#i-chat"></use></svg>家と家財をまとめて無料相談<svg class="icon"><use href="#i-arrow"></use></svg></a>
+            <a class="btn secondary" href="tel:0762403339"><svg class="icon"><use href="#i-phone"></use></svg>電話で相談する</a>
+          </div>
+          <p class="hero-note">石川県金沢市周辺・野々市市を中心にご相談を承ります。</p>
+        </div>
+
+        <div class="visual" aria-hidden="true">
+          <div class="visual-card">
+            <div class="sun"></div>
+            <div class="house"><div class="roof"></div><div class="body-house"><div class="door"></div><div class="window"></div></div></div>
+            <div class="box one"><svg class="icon" style="width:34px;height:34px"><use href="#i-chair"></use></svg></div>
+            <div class="box two"><svg class="icon" style="width:34px;height:34px"><use href="#i-vase"></use></svg></div>
+            <div class="box three"><svg class="icon" style="width:34px;height:34px"><use href="#i-bag"></use></svg></div>
+          </div>
+          <div class="tag a"><i><svg class="icon"><use href="#i-home"></use></svg></i>不動産の査定</div>
+          <div class="tag b"><i><svg class="icon"><use href="#i-search"></use></svg></i>家財の確認・査定</div>
+          <div class="tag c"><i><svg class="icon"><use href="#i-box"></use></svg></i>進め方をご提案</div>
+          <div class="license"><strong>古物商許可取得済み</strong>第511070015824号</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item"><span class="trust-icon"><svg class="icon"><use href="#i-home"></use></svg></span><div><strong>不動産査定</strong><span>売却・活用を検討</span></div></div>
+          <div class="trust-item"><span class="trust-icon"><svg class="icon"><use href="#i-box"></use></svg></span><div><strong>家財査定</strong><span>家具・家電・骨董品など</span></div></div>
+          <div class="trust-item"><span class="trust-icon"><svg class="icon"><use href="#i-shield"></use></svg></span><div><strong>古物商許可</strong><span>許可を持つ立場で確認</span></div></div>
+          <div class="trust-item"><span class="trust-icon"><svg class="icon"><use href="#i-chat"></use></svg></span><div><strong>一つの窓口</strong><span>複数業者を探す負担を軽減</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section alt" id="problems">
+      <div class="container">
+        <div class="heading">
+          <span class="eyebrow">YOUR CONCERNS</span>
+          <h2 class="title">このようなお悩みは<br><span class="marker">ありませんか？</span></h2>
+          <p class="lead">実家や空き家の整理は、不動産だけを考えても進まないことがあります。</p>
+        </div>
+        <div class="grid-2">
+          <article class="worry"><span class="num">01</span><div><h3>実家に物が多く、何から始めればよいか分からない</h3><p>家を売る前に片付けが必要なのか、何を残すべきなのか判断できない。</p></div></article>
+          <article class="worry"><span class="num">02</span><div><h3>大切な品を、すべて処分してよいのか迷っている</h3><p>家具や骨董品、贈答品などに価値があるのか、一度確認してから整理したい。</p></div></article>
+          <article class="worry"><span class="num">03</span><div><h3>不動産会社と片付け業者を別々に探すのが大変</h3><p>複数の会社へ連絡し、立ち会いや日程調整を繰り返す負担を減らしたい。</p></div></article>
+          <article class="worry"><span class="num">04</span><div><h3>遠方に住んでいて、実家の整理に通うことが難しい</h3><p>現地の状況を確認しながら、できるだけ効率よく売却や整理を進めたい。</p></div></article>
+        </div>
+        <div class="notice"><svg class="icon"><use href="#i-heart"></use></svg>売却を決める前でも大丈夫です。まずは、家と家財の状況を一緒に整理します。</div>
+      </div>
+    </section>
+
+    <section class="section" id="service">
+      <div class="container compare-layout">
+        <div>
+          <span class="eyebrow">ONE-STOP SERVICE</span>
+          <h2 class="title">二つの手続きを、<br><span class="marker">一つの窓口へ。</span></h2>
+          <p class="lead">リエール不動産の「不動産まるごと査定」は、不動産の査定だけでなく、家の中に残された品物も確認します。</p>
+          <ul class="points">
+            <li><svg class="icon"><use href="#i-check"></use></svg>不動産と家財をまとめて相談できる</li>
+            <li><svg class="icon"><use href="#i-check"></use></svg>残す・売る・整理するものを分けて考えられる</li>
+            <li><svg class="icon"><use href="#i-check"></use></svg>査定結果を確認してから家族で検討できる</li>
+          </ul>
+        </div>
+        <div class="compare">
+          <article class="compare-card">
+            <span class="pill">一般的な進め方</span>
+            <h3>目的ごとに業者を探し、個別に相談</h3>
+            <ul class="compare-list">
+              <li><svg class="icon"><use href="#i-building"></use></svg>不動産会社を探す</li>
+              <li><svg class="icon"><use href="#i-search"></use></svg>買取業者を探す</li>
+              <li><svg class="icon"><use href="#i-box"></use></svg>整理業者を探す</li>
+            </ul>
+          </article>
+          <div class="arrow"><svg class="icon" style="width:40px;height:40px"><use href="#i-arrow"></use></svg></div>
+          <article class="compare-card main">
+            <span class="pill">リエール不動産</span>
+            <h3>家も、家の中も、まとめて相談</h3>
+            <ul class="compare-list">
+              <li><svg class="icon"><use href="#i-home"></use></svg>不動産の査定・売却相談</li>
+              <li><svg class="icon"><use href="#i-box"></use></svg>家財・遺品の確認と査定</li>
+              <li><svg class="icon"><use href="#i-chat"></use></svg>整理方法と進め方をご提案</li>
+            </ul>
+            <div class="summary">複数の窓口を、一つにまとめます。</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="heading">
+          <span class="eyebrow">TOTAL SUPPORT</span>
+          <h2 class="title">住まいも、家の中も。<br><span class="marker">まとめてご相談ください。</span></h2>
+          <p class="lead">状況をお聞きし、必要な対応を整理してご案内します。</p>
+        </div>
+        <div class="service-grid">
+          <article class="service"><div class="service-icon"><svg class="icon" style="width:29px;height:29px"><use href="#i-home"></use></svg></div><h3>不動産査定・売却相談</h3><p>土地、一戸建て、マンション、店舗などの状況を確認し、売却や今後の進め方をご案内します。</p></article>
+          <article class="service"><div class="service-icon"><svg class="icon" style="width:29px;height:29px"><use href="#i-search"></use></svg></div><h3>家財・遺品の査定</h3><p>家具、家電、骨董品、ブランド品、美術品などを確認し、価値が見込める品を査定します。</p></article>
+          <article class="service"><div class="service-icon"><svg class="icon" style="width:29px;height:29px"><use href="#i-box"></use></svg></div><h3>残置物の確認・整理</h3><p>家に残された品物を「残す・売る・整理する」に分け、判断しやすい状態へ整えます。</p></article>
+          <article class="service"><div class="service-icon"><svg class="icon" style="width:29px;height:29px"><use href="#i-building"></use></svg></div><h3>解体・残物処理のご相談</h3><p>建物の状態や売却方法に応じて、解体や残物処理を含む今後の選択肢をご案内します。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="items">
+      <div class="container">
+        <div class="heading">
+          <span class="eyebrow">VALUATION ITEMS</span>
+          <h2 class="title">処分を決める前に、<br><span class="marker">価値を確認しませんか。</span></h2>
+          <p class="lead">一見すると価値が分かりにくい品も、確認することで査定対象になる場合があります。</p>
+        </div>
+        <div class="items-panel">
+          <div class="items">
+            <article class="item"><div class="item-icon"><svg class="icon" style="width:35px;height:35px"><use href="#i-chair"></use></svg></div><strong>家具</strong><span>椅子・テーブル・収納家具など</span></article>
+            <article class="item"><div class="item-icon"><svg class="icon" style="width:35px;height:35px"><use href="#i-tv"></use></svg></div><strong>家電製品</strong><span>テレビ・冷蔵庫・生活家電など</span></article>
+            <article class="item"><div class="item-icon"><svg class="icon" style="width:35px;height:35px"><use href="#i-bag"></use></svg></div><strong>ブランド品</strong><span>バッグ・時計・装飾品など</span></article>
+            <article class="item"><div class="item-icon"><svg class="icon" style="width:35px;height:35px"><use href="#i-vase"></use></svg></div><strong>骨董品</strong><span>陶器・掛け軸・古い道具など</span></article>
+            <article class="item"><div class="item-icon"><svg class="icon" style="width:35px;height:35px"><use href="#i-picture"></use></svg></div><strong>美術品</strong><span>絵画・置物・工芸品など</span></article>
+            <article class="item"><div class="item-icon"><svg class="icon" style="width:35px;height:35px"><use href="#i-dish"></use></svg></div><strong>日用品・雑貨</strong><span>食器・贈答品・趣味用品など</span></article>
+          </div>
+          <div class="items-note"><svg class="icon"><use href="#i-alert"></use></svg>品物の状態・年式・需要などにより、買取できない場合があります。確認後、残すもの・売るもの・整理するものを分けてご案内します。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="heading">
+          <span class="eyebrow">CONSULTATION SCENES</span>
+          <h2 class="title">このような状況から<br><span class="marker">ご相談いただけます。</span></h2>
+          <p class="lead">まだ方針が決まっていなくても、現在の状況を整理するところから始められます。</p>
+        </div>
+        <div class="scene-grid">
+          <article class="scene"><small>SCENE 01</small><div class="scene-icon"><svg class="icon" style="width:29px;height:29px"><use href="#i-family"></use></svg></div><h3>実家を相続したが、家財が残っている</h3><p>売却前に片付けるべきか、価値のある品が残っていないかを確認したい場合。</p><b>不動産と家財を同じ窓口で確認</b></article>
+          <article class="scene"><small>SCENE 02</small><div class="scene-icon"><svg class="icon" style="width:29px;height:29px"><use href="#i-bed"></use></svg></div><h3>親の施設入居により、実家が空き家になる</h3><p>売却するか、残すか、管理するかを含めて、家族で判断できる材料が必要な場合。</p><b>売却を急がず選択肢を整理</b></article>
+          <article class="scene"><small>SCENE 03</small><div class="scene-icon"><svg class="icon" style="width:29px;height:29px"><use href="#i-distance"></use></svg></div><h3>遠方に住んでいて、現地へ何度も通えない</h3><p>実家の状況が分からず、どこへ相談すればよいか迷っている場合。</p><b>現状確認から進め方をご相談</b></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="reasons">
+      <div class="container">
+        <div class="heading">
+          <span class="eyebrow">WHY LIERRE ESTATE</span>
+          <h2 class="title">リエール不動産が<br>大切にしていること</h2>
+          <p class="lead">「すぐ売る」ことだけを目的にせず、納得できる整理と選択を支えます。</p>
+        </div>
+        <div class="reason-grid">
+          <article class="reason"><small>REASON 01</small><h3>家と家財を同じ視点で確認</h3><p>不動産と家の中を別々の問題として扱わず、売却までに必要な作業をまとめて整理します。</p></article>
+          <article class="reason"><small>REASON 02</small><h3>品物を一つずつ丁寧に確認</h3><p>処分を前提にせず、価値が見込める品がないか確認したうえで、今後の扱いをご提案します。</p></article>
+          <article class="reason"><small>REASON 03</small><h3>査定結果を見てから検討できる</h3><p>査定を受けたからといって、必ず売却する必要はありません。ご家族で検討する時間を大切にします。</p></article>
+        </div>
+        <div class="license-box"><div><strong>リエール不動産株式会社は古物商許可を取得しています</strong><span>古物商許可を持つ立場として、家財の確認と査定を行います。</span></div><div class="license-no">許可番号：第511070015824号</div></div>
+      </div>
+    </section>
+
+    <section class="section" id="flow">
+      <div class="container">
+        <div class="heading">
+          <span class="eyebrow">CONSULTATION FLOW</span>
+          <h2 class="title">ご相談から解決までの<br><span class="marker">6つのステップ</span></h2>
+          <p class="lead">査定後に必ず契約する必要はありません。ご希望に沿って進めます。</p>
+        </div>
+        <div class="flow">
+          <article class="step"><div class="step-num">STEP<br>01</div><h3>無料相談</h3><p>現在の状況やお悩みをお聞きします。</p></article>
+          <article class="step"><div class="step-num">STEP<br>02</div><h3>現地確認</h3><p>不動産と家財の状態を確認します。</p></article>
+          <article class="step"><div class="step-num">STEP<br>03</div><h3>査定・整理</h3><p>査定内容と必要な作業を整理します。</p></article>
+          <article class="step"><div class="step-num">STEP<br>04</div><h3>ご提案</h3><p>売却や家財整理の進め方をご案内します。</p></article>
+          <article class="step"><div class="step-num">STEP<br>05</div><h3>ご家族で検討</h3><p>査定結果をもとにご判断ください。</p></article>
+          <article class="step"><div class="step-num">STEP<br>06</div><h3>希望時のみ契約</h3><p>内容に納得いただいた場合に進めます。</p></article>
+        </div>
+        <div class="flow-note">査定だけのご相談も可能です。売却や契約を急がせることはありません。</div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="empty-box">
+          <div><span class="eyebrow" style="color:#f0cf87">EMPTY HOUSE</span><h2>空き家は、状態が悪くなる前に。<br>早めの確認が大切です。</h2><p>管理されない期間が長くなるほど、建物の劣化や家財整理の負担が大きくなる可能性があります。売却・活用・管理の方針が決まっていない段階でもご相談ください。</p></div>
+          <aside class="law-card"><h3>空き家の管理について</h3><p>市区町村から「管理不全空家」や「特定空家」に関する勧告を受けた場合、固定資産税等の住宅用地特例が適用されなくなる可能性があります。</p><small>適用条件や制度の詳細は、物件所在地の自治体や専門家へご確認ください。</small></aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="heading"><span class="eyebrow">FAQ</span><h2 class="title">よくあるご質問</h2><p class="lead">ご相談前に多くいただく疑問をまとめました。</p></div>
+        <div class="faq-list">
+          <details class="faq"><summary><span class="qa">Q</span>査定を依頼すると、必ず売却しなければなりませんか？<span class="toggle"></span></summary><div class="answer"><span class="qa">A</span><p>いいえ。査定結果を確認したうえで、ご家族でご検討いただけます。査定後に必ず契約する必要はありません。</p></div></details>
+          <details class="faq"><summary><span class="qa">Q</span>家の中が片付いていない状態でも相談できますか？<span class="toggle"></span></summary><div class="answer"><span class="qa">A</span><p>はい。片付ける前の状態からご相談いただけます。家財を確認し、残すもの・売るもの・整理するものを分けて考えます。</p></div></details>
+          <details class="faq"><summary><span class="qa">Q</span>何が売れるのか分からなくても大丈夫ですか？<span class="toggle"></span></summary><div class="answer"><span class="qa">A</span><p>大丈夫です。ご自身で処分を判断する前に、家具・家電・骨董品・ブランド品などを確認します。状態などにより買取できない場合もあります。</p></div></details>
+          <details class="faq"><summary><span class="qa">Q</span>遠方に住んでいても相談できますか？<span class="toggle"></span></summary><div class="answer"><span class="qa">A</span><p>まずは電話またはフォームから状況をお聞かせください。物件所在地や立ち会いの可否を確認し、進め方をご案内します。</p></div></details>
+          <details class="faq"><summary><span class="qa">Q</span>相続の手続きが終わっていなくても相談できますか？<span class="toggle"></span></summary><div class="answer"><span class="qa">A</span><p>現在の名義や相続の状況を確認したうえで、今後必要になる手続きと不動産売却の進め方を整理します。</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-side">
+          <span class="eyebrow">FREE CONSULTATION</span>
+          <h2>まだ売ると決めていなくても、<br>大丈夫です。</h2>
+          <p>家や家財の状況をお聞かせください。何から始めるべきか、どのような選択肢があるかを整理します。</p>
+          <ul class="assurance">
+            <li><svg class="icon"><use href="#i-check"></use></svg>相談・査定のみでも可能</li>
+            <li><svg class="icon"><use href="#i-check"></use></svg>契約を前提としないご相談</li>
+            <li><svg class="icon"><use href="#i-check"></use></svg>ご家族からの相談も可能</li>
+          </ul>
+          <div class="phone-card"><small>電話でのご相談</small><a href="tel:0762403339">076-240-3339</a><p>「不動産まるごと査定について」とお伝えください。</p></div>
+        </div>
+
+        <div class="form-card">
+          <div class="progress">
+            <div class="progress-item active" data-progress="1"><b>1</b><span>相談内容</span></div>
+            <div class="progress-item" data-progress="2"><b>2</b><span>物件情報</span></div>
+            <div class="progress-item" data-progress="3"><b>3</b><span>連絡先・確認</span></div>
+          </div>
+
+          <div class="success" id="success">入力内容の確認が完了しました。公開時は、既存サイトのメール送信処理へ接続してご利用ください。</div>
+
+          <form id="form" novalidate>
+            <section class="form-step active" data-step="1">
+              <h3>相談したい内容を教えてください</h3>
+              <p class="form-intro">現時点で最も近いものを一つ選択してください。</p>
+
+              <fieldset class="field" data-field="consultationType">
+                <legend class="label">相談内容 <span class="required">必須</span></legend>
+                <div class="choice-grid">
+                  <div class="choice"><input type="radio" name="consultationType" id="c1" value="家と家財をまとめて相談したい"><label for="c1">家と家財をまとめて相談したい</label></div>
+                  <div class="choice"><input type="radio" name="consultationType" id="c2" value="不動産について相談したい"><label for="c2">不動産について相談したい</label></div>
+                  <div class="choice"><input type="radio" name="consultationType" id="c3" value="家財について相談したい"><label for="c3">家財について相談したい</label></div>
+                  <div class="choice"><input type="radio" name="consultationType" id="c4" value="何をすべきか分からない"><label for="c4">何をすべきか分からない</label></div>
+                </div>
+                <p class="error">相談内容を選択してください。</p>
+              </fieldset>
+
+              <fieldset class="field" data-field="situation">
+                <legend class="label">現在の状況 <span class="required">必須</span></legend>
+                <div class="choice-grid three">
+                  <div class="choice"><input type="radio" name="situation" id="s1" value="相続した実家"><label for="s1">相続した実家</label></div>
+                  <div class="choice"><input type="radio" name="situation" id="s2" value="空き家"><label for="s2">空き家</label></div>
+                  <div class="choice"><input type="radio" name="situation" id="s3" value="居住中"><label for="s3">居住中</label></div>
+                  <div class="choice"><input type="radio" name="situation" id="s4" value="施設入居"><label for="s4">施設入居</label></div>
+                  <div class="choice"><input type="radio" name="situation" id="s5" value="住み替え・引っ越し"><label for="s5">住み替え・引っ越し</label></div>
+                  <div class="choice"><input type="radio" name="situation" id="s6" value="その他"><label for="s6">その他</label></div>
+                </div>
+                <p class="error">現在の状況を選択してください。</p>
+              </fieldset>
+
+              <div class="form-nav end"><button class="btn primary next" type="button" data-next="2">次へ進む</button></div>
+            </section>
+
+            <section class="form-step" data-step="2">
+              <h3>物件について教えてください</h3>
+              <p class="form-intro">分かる範囲で入力してください。</p>
+
+              <fieldset class="field" data-field="propertyType">
+                <legend class="label">物件種別 <span class="required">必須</span></legend>
+                <div class="choice-grid three">
+                  <div class="choice"><input type="radio" name="propertyType" id="p1" value="一戸建て"><label for="p1">一戸建て</label></div>
+                  <div class="choice"><input type="radio" name="propertyType" id="p2" value="土地"><label for="p2">土地</label></div>
+                  <div class="choice"><input type="radio" name="propertyType" id="p3" value="マンション"><label for="p3">マンション</label></div>
+                  <div class="choice"><input type="radio" name="propertyType" id="p4" value="店舗・事務所"><label for="p4">店舗・事務所</label></div>
+                  <div class="choice"><input type="radio" name="propertyType" id="p5" value="工場・倉庫"><label for="p5">工場・倉庫</label></div>
+                  <div class="choice"><input type="radio" name="propertyType" id="p6" value="その他・不明"><label for="p6">その他・不明</label></div>
+                </div>
+                <p class="error">物件種別を選択してください。</p>
+              </fieldset>
+
+              <div class="row">
+                <div class="field" data-field="prefecture">
+                  <label class="label" for="prefecture">都道府県 <span class="required">必須</span></label>
+                  <select id="prefecture" name="prefecture"><option value="">選択してください</option><option>石川県</option><option>富山県</option><option>福井県</option><option>その他</option></select>
+                  <p class="error">都道府県を選択してください。</p>
+                </div>
+                <div class="field" data-field="city">
+                  <label class="label" for="city">市区町村 <span class="required">必須</span></label>
+                  <input id="city" name="city" type="text" autocomplete="address-level2" placeholder="例：野々市市">
+                  <p class="error">市区町村を入力してください。</p>
+                </div>
+              </div>
+
+              <div class="field"><label class="label" for="address">町名・番地・建物名 <span class="optional">任意</span></label><input id="address" name="address" type="text" autocomplete="street-address" placeholder="例：御経塚2丁目"></div>
+              <div class="field"><label class="label" for="details">ご相談内容・気になること <span class="optional">任意</span></label><textarea id="details" name="details" placeholder="例：相続した実家に家具や食器が残っています。売却するかどうかも含めて相談したいです。"></textarea></div>
+
+              <div class="form-nav"><button class="btn secondary prev" type="button" data-prev="1">前へ戻る</button><button class="btn primary next" type="button" data-next="3">次へ進む</button></div>
+            </section>
+
+            <section class="form-step" data-step="3">
+              <h3>ご連絡先を入力してください</h3>
+              <p class="form-intro">担当者から連絡するための情報をご入力ください。</p>
+
+              <div class="field" data-field="name"><label class="label" for="name">お名前 <span class="required">必須</span></label><input id="name" name="name" type="text" autocomplete="name" placeholder="例：山田 太郎"><p class="error">お名前を入力してください。</p></div>
+
+              <fieldset class="field" data-field="contactMethod">
+                <legend class="label">希望する連絡方法 <span class="required">必須</span></legend>
+                <div class="choice-grid"><div class="choice"><input type="radio" name="contactMethod" id="m1" value="電話"><label for="m1">電話</label></div><div class="choice"><input type="radio" name="contactMethod" id="m2" value="メール"><label for="m2">メール</label></div></div>
+                <p class="error">希望する連絡方法を選択してください。</p>
+              </fieldset>
+
+              <div class="row">
+                <div class="field" data-field="phone"><label class="label" for="phone">電話番号 <span class="optional">連絡方法に応じて必須</span></label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="例：09012345678"><p class="error">正しい電話番号を入力してください。</p></div>
+                <div class="field" data-field="email"><label class="label" for="email">メールアドレス <span class="optional">連絡方法に応じて必須</span></label><input id="email" name="email" type="email" autocomplete="email" placeholder="例：example@email.jp"><p class="error">正しいメールアドレスを入力してください。</p></div>
+              </div>
+
+              <div class="field"><label class="label" for="time">希望する連絡時間帯 <span class="optional">任意</span></label><select id="time" name="time"><option value="">希望なし</option><option>午前</option><option>12時から15時</option><option>15時から18時</option><option>その他</option></select></div>
+
+              <div class="privacy field" data-field="consent">
+                <details><summary>個人情報の取り扱いについて確認する</summary><p>ご入力いただいた情報は、お問い合わせへの回答、サービスのご案内、必要な連絡のために利用します。法令で認められる場合を除き、ご本人の同意なく第三者へ提供しません。</p></details>
+                <div class="consent"><input id="consent" name="consent" type="checkbox"><label for="consent">個人情報の取り扱いに同意します。</label></div>
+                <p class="error">個人情報の取り扱いへの同意が必要です。</p>
+              </div>
+
+              <div class="form-nav"><button class="btn secondary prev" type="button" data-prev="2">前へ戻る</button><button class="btn primary" id="reviewBtn" type="button">入力内容を確認する</button></div>
+            </section>
+
+            <section class="form-step" data-step="4">
+              <h3>入力内容をご確認ください</h3>
+              <p class="form-intro">内容に間違いがなければ、確認完了ボタンを押してください。</p>
+              <dl class="review" id="review"></dl>
+              <div class="form-nav"><button class="btn secondary" id="editBtn" type="button">入力内容を修正する</button><button class="btn primary" type="submit">入力確認を完了する</button></div>
+              <p class="disclaimer">このHTML単体では外部送信を行いません。公開時は既存サイトのメール送信処理へ接続してください。</p>
+            </section>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="https://lierre-estate.co.jp/wp-content/themes/estate/img/common/logo_footer.png" alt="リエール不動産株式会社">
+        <p>リエール不動産株式会社</p>
+        <p>〒921-8801 石川県野々市市御経塚2丁目252番地</p>
+        <p>不動産の売買・査定・家財整理のご相談を承ります。</p>
+      </div>
+      <div class="footer-cards">
+        <div class="footer-card"><small>電話でのお問い合わせ</small><a href="tel:0762403339">TEL 076-240-3339</a></div>
+        <div class="footer-card"><small>ファクス</small><strong>FAX 076-240-3341</strong></div>
+        <div class="footer-card"><small>古物商許可番号</small><strong>第511070015824号</strong></div>
+        <div class="footer-card"><small>所在地</small><strong>石川県野々市市御経塚2丁目252番地</strong></div>
+      </div>
+    </div>
+    <div class="copyright">© Lierre Estate. All Rights Reserved.</div>
+  </footer>
+
+  <div class="mobile-fixed"><a class="tel" href="tel:0762403339"><svg class="icon"><use href="#i-phone"></use></svg>電話で相談</a><a class="form-link" href="#contact"><svg class="icon"><use href="#i-chat"></use></svg>無料相談フォーム</a></div>
+
+  <script>
+    (() => {
+      const header = document.getElementById('header');
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const form = document.getElementById('form');
+      const steps = [...form.querySelectorAll('.form-step')];
+      const progress = [...document.querySelectorAll('.progress-item')];
+      const success = document.getElementById('success');
+      const review = document.getElementById('review');
+      let current = 1;
+
+      const updateHeader = () => header.classList.toggle('scrolled', scrollY > 12);
+      addEventListener('scroll', updateHeader, {passive:true});
+      updateHeader();
+
+      const closeMenu = () => {
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.setAttribute('aria-label','メニューを開く');
+        mobileMenu.classList.remove('open');
+        mobileMenu.setAttribute('aria-hidden','true');
+        document.body.classList.remove('menu-open');
+      };
+      menuBtn.addEventListener('click', () => {
+        const open = menuBtn.getAttribute('aria-expanded') === 'true';
+        if(open){ closeMenu(); return; }
+        menuBtn.setAttribute('aria-expanded','true');
+        menuBtn.setAttribute('aria-label','メニューを閉じる');
+        mobileMenu.classList.add('open');
+        mobileMenu.setAttribute('aria-hidden','false');
+        document.body.classList.add('menu-open');
+      });
+      mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      addEventListener('keydown', e => { if(e.key === 'Escape') closeMenu(); });
+
+      const checked = name => form.querySelector(`input[name="${name}"]:checked`)?.value || '';
+      const field = name => form.querySelector(`[data-field="${name}"]`);
+      const invalid = (name, state) => field(name)?.classList.toggle('invalid', state);
+
+      function validate(step){
+        let ok = true;
+        if(step === 1){
+          const a = !!checked('consultationType');
+          const b = !!checked('situation');
+          invalid('consultationType', !a);
+          invalid('situation', !b);
+          ok = a && b;
+        }
+        if(step === 2){
+          const a = !!checked('propertyType');
+          const b = !!form.prefecture.value;
+          const c = !!form.city.value.trim();
+          invalid('propertyType', !a);
+          invalid('prefecture', !b);
+          invalid('city', !c);
+          ok = a && b && c;
+        }
+        if(step === 3){
+          const name = form.name.value.trim();
+          const method = checked('contactMethod');
+          const phone = form.phone.value.replace(/\D/g,'');
+          const email = form.email.value.trim();
+          const phoneOk = /^0\d{9,10}$/.test(phone);
+          const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+          const phoneError = method === '電話' ? !phoneOk : !!phone && !phoneOk;
+          const emailError = method === 'メール' ? !emailOk : !!email && !emailOk;
+          invalid('name', !name);
+          invalid('contactMethod', !method);
+          invalid('phone', phoneError);
+          invalid('email', emailError);
+          invalid('consent', !form.consent.checked);
+          ok = !!name && !!method && !phoneError && !emailError && form.consent.checked;
+        }
+        if(!ok){
+          const first = form.querySelector('.field.invalid input,.field.invalid select,.field.invalid textarea');
+          first?.focus({preventScroll:true});
+          first?.closest('.field')?.scrollIntoView({behavior:'smooth',block:'center'});
+        }
+        return ok;
+      }
+
+      function show(step){
+        current = step;
+        steps.forEach(s => s.classList.toggle('active', Number(s.dataset.step) === step));
+        progress.forEach((p,i) => {
+          const n = i + 1;
+          p.classList.toggle('active', step < 4 && n === step);
+          p.classList.toggle('done', step === 4 || n < step);
+        });
+        document.getElementById('contact').scrollIntoView({behavior:'smooth',block:'start'});
+      }
+
+      form.querySelectorAll('.next').forEach(b => b.addEventListener('click', () => {
+        if(validate(current)) show(Number(b.dataset.next));
+      }));
+      form.querySelectorAll('.prev').forEach(b => b.addEventListener('click', () => show(Number(b.dataset.prev))));
+      form.addEventListener('input', e => e.target.closest('.field')?.classList.remove('invalid'));
+      form.addEventListener('change', e => e.target.closest('.field')?.classList.remove('invalid'));
+
+      const row = (label,value) => {
+        const div = document.createElement('div');
+        div.className = 'review-row';
+        const dt = document.createElement('dt');
+        const dd = document.createElement('dd');
+        dt.textContent = label;
+        dd.textContent = value || '未入力';
+        div.append(dt,dd);
+        return div;
+      };
+
+      document.getElementById('reviewBtn').addEventListener('click', () => {
+        if(!validate(3)) return;
+        review.innerHTML = '';
+        [
+          ['相談内容',checked('consultationType')],
+          ['現在の状況',checked('situation')],
+          ['物件種別',checked('propertyType')],
+          ['物件所在地',[form.prefecture.value,form.city.value,form.address.value].filter(Boolean).join(' ')],
+          ['ご相談内容',form.details.value.trim() || '特記事項なし'],
+          ['お名前',form.name.value.trim()],
+          ['希望する連絡方法',checked('contactMethod')],
+          ['電話番号',form.phone.value.trim() || '未入力'],
+          ['メールアドレス',form.email.value.trim() || '未入力'],
+          ['希望する連絡時間帯',form.time.value || '希望なし']
+        ].forEach(v => review.append(row(v[0],v[1])));
+        show(4);
+      });
+
+      document.getElementById('editBtn').addEventListener('click', () => show(3));
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        success.classList.add('show');
+        success.scrollIntoView({behavior:'smooth',block:'center'});
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if(!target) return;
+        e.preventDefault();
+        closeMenu();
+        const top = target.getBoundingClientRect().top + scrollY - header.offsetHeight;
+        scrollTo({top,behavior:'smooth'});
+      }));
+    })();
+  </script>
+</body>
+</html>
