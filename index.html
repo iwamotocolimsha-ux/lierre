@@ -653,8 +653,8 @@
       <div class="container contact-grid">
         <div class="contact-side">
           <span class="eyebrow">FREE CONSULTATION</span>
-          <h2>まだ売ると決めていなくても、<br>大丈夫です。</h2>
-          <p>家や家財の状況をお聞かせください。何から始めるべきか、どのような選択肢があるかを整理します。</p>
+          <h2>石川県内、どちらからでも<br>お気軽に。</h2>
+          <p>石川県全域で、現地でのご相談に対応しています。物件所在地とご連絡先をお知らせいただければ、ご都合を伺いながら訪問日時をご相談します。</p>
           <ul class="assurance">
             <li><svg class="icon"><use href="#i-check"></use></svg>相談・査定のみでも可能</li>
             <li><svg class="icon"><use href="#i-check"></use></svg>契約を前提としないご相談</li>
@@ -664,116 +664,41 @@
         </div>
 
         <div class="form-card">
-          <div class="progress">
-            <div class="progress-item active" data-progress="1"><b>1</b><span>相談内容</span></div>
-            <div class="progress-item" data-progress="2"><b>2</b><span>物件情報</span></div>
-            <div class="progress-item" data-progress="3"><b>3</b><span>連絡先・確認</span></div>
-          </div>
-
-          <div class="success" id="success">入力内容の確認が完了しました。公開時は、既存サイトのメール送信処理へ接続してご利用ください。</div>
+          <div class="success" id="success" role="status">入力内容の確認が完了しました。まだ送信されていません。ご相談はお電話（076-240-3339）でも承ります。</div>
 
           <form id="form" novalidate>
             <section class="form-step active" data-step="1">
-              <h3>相談したい内容を教えてください</h3>
-              <p class="form-intro">現時点で最も近いものを一つ選択してください。</p>
+              <h3>現地での相談を申し込む</h3>
+              <p class="form-intro">入力は3項目だけ。訪問日時は、ご連絡の際に調整します。</p>
 
-              <fieldset class="field" data-field="consultationType">
-                <legend class="label">相談内容 <span class="required">必須</span></legend>
-                <div class="choice-grid">
-                  <div class="choice"><input type="radio" name="consultationType" id="c1" value="家と家財をまとめて相談したい"><label for="c1">家と家財をまとめて相談したい</label></div>
-                  <div class="choice"><input type="radio" name="consultationType" id="c2" value="不動産について相談したい"><label for="c2">不動産について相談したい</label></div>
-                  <div class="choice"><input type="radio" name="consultationType" id="c3" value="家財について相談したい"><label for="c3">家財について相談したい</label></div>
-                  <div class="choice"><input type="radio" name="consultationType" id="c4" value="何をすべきか分からない"><label for="c4">何をすべきか分からない</label></div>
-                </div>
-                <p class="error">相談内容を選択してください。</p>
-              </fieldset>
-
-              <fieldset class="field" data-field="situation">
-                <legend class="label">現在の状況 <span class="required">必須</span></legend>
-                <div class="choice-grid three">
-                  <div class="choice"><input type="radio" name="situation" id="s1" value="相続した実家"><label for="s1">相続した実家</label></div>
-                  <div class="choice"><input type="radio" name="situation" id="s2" value="空き家"><label for="s2">空き家</label></div>
-                  <div class="choice"><input type="radio" name="situation" id="s3" value="居住中"><label for="s3">居住中</label></div>
-                  <div class="choice"><input type="radio" name="situation" id="s4" value="施設入居"><label for="s4">施設入居</label></div>
-                  <div class="choice"><input type="radio" name="situation" id="s5" value="住み替え・引っ越し"><label for="s5">住み替え・引っ越し</label></div>
-                  <div class="choice"><input type="radio" name="situation" id="s6" value="その他"><label for="s6">その他</label></div>
-                </div>
-                <p class="error">現在の状況を選択してください。</p>
-              </fieldset>
-
-              <div class="form-nav end"><button class="btn primary next" type="button" data-next="2">次へ進む</button></div>
+              <div class="field" data-field="address">
+                <label class="label" for="address">物件所在地 <span class="required">必須</span></label>
+                <input id="address" name="address" type="text" autocomplete="off" placeholder="例：石川県野々市市御経塚2丁目○番地" required aria-describedby="addressError">
+                <p class="error" id="addressError">物件所在地を入力してください。</p>
+              </div>
+              <div class="field" data-field="name">
+                <label class="label" for="name">お名前 <span class="required">必須</span></label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="例：山田 太郎" required aria-describedby="nameError">
+                <p class="error" id="nameError">お名前を入力してください。</p>
+              </div>
+              <div class="field" data-field="contact">
+                <label class="label" for="contactInfo">電話番号 または メールアドレス <span class="required">必須</span></label>
+                <input id="contactInfo" name="contactInfo" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="例：09012345678 ／ example@email.jp" required aria-describedby="contactHelp contactError">
+                <p class="form-intro" id="contactHelp" style="margin:8px 0 0">どちらか一つをご入力ください。</p>
+                <p class="error" id="contactError">電話番号またはメールアドレスを正しく入力してください。</p>
+              </div>
+              <div class="privacy">
+                <details><summary>個人情報の取り扱いについて</summary><p>ご入力いただいた情報は、お問い合わせへの回答、サービスのご案内、必要な連絡のために利用します。法令で認められる場合を除き、ご本人の同意なく第三者へ提供しません。</p></details>
+                <p>個人情報の取り扱いに同意のうえ、お進みください。</p>
+              </div>
+              <div class="form-nav end"><button class="btn primary" id="reviewBtn" type="submit">入力内容を確認する</button></div>
             </section>
-
             <section class="form-step" data-step="2">
-              <h3>物件について教えてください</h3>
-              <p class="form-intro">分かる範囲で入力してください。</p>
-
-              <fieldset class="field" data-field="propertyType">
-                <legend class="label">物件種別 <span class="required">必須</span></legend>
-                <div class="choice-grid three">
-                  <div class="choice"><input type="radio" name="propertyType" id="p1" value="一戸建て"><label for="p1">一戸建て</label></div>
-                  <div class="choice"><input type="radio" name="propertyType" id="p2" value="土地"><label for="p2">土地</label></div>
-                  <div class="choice"><input type="radio" name="propertyType" id="p3" value="マンション"><label for="p3">マンション</label></div>
-                  <div class="choice"><input type="radio" name="propertyType" id="p4" value="店舗・事務所"><label for="p4">店舗・事務所</label></div>
-                  <div class="choice"><input type="radio" name="propertyType" id="p5" value="工場・倉庫"><label for="p5">工場・倉庫</label></div>
-                  <div class="choice"><input type="radio" name="propertyType" id="p6" value="その他・不明"><label for="p6">その他・不明</label></div>
-                </div>
-                <p class="error">物件種別を選択してください。</p>
-              </fieldset>
-
-              <div class="row">
-                <div class="field" data-field="prefecture">
-                  <label class="label" for="prefecture">都道府県 <span class="required">必須</span></label>
-                  <select id="prefecture" name="prefecture"><option value="">選択してください</option><option>石川県</option><option>富山県</option><option>福井県</option><option>その他</option></select>
-                  <p class="error">都道府県を選択してください。</p>
-                </div>
-                <div class="field" data-field="city">
-                  <label class="label" for="city">市区町村 <span class="required">必須</span></label>
-                  <input id="city" name="city" type="text" autocomplete="address-level2" placeholder="例：野々市市">
-                  <p class="error">市区町村を入力してください。</p>
-                </div>
-              </div>
-
-              <div class="field"><label class="label" for="address">町名・番地・建物名 <span class="optional">任意</span></label><input id="address" name="address" type="text" autocomplete="street-address" placeholder="例：御経塚2丁目"></div>
-              <div class="field"><label class="label" for="details">ご相談内容・気になること <span class="optional">任意</span></label><textarea id="details" name="details" placeholder="例：相続した実家に家具や食器が残っています。売却するかどうかも含めて相談したいです。"></textarea></div>
-
-              <div class="form-nav"><button class="btn secondary prev" type="button" data-prev="1">前へ戻る</button><button class="btn primary next" type="button" data-next="3">次へ進む</button></div>
-            </section>
-
-            <section class="form-step" data-step="3">
-              <h3>ご連絡先を入力してください</h3>
-              <p class="form-intro">担当者から連絡するための情報をご入力ください。</p>
-
-              <div class="field" data-field="name"><label class="label" for="name">お名前 <span class="required">必須</span></label><input id="name" name="name" type="text" autocomplete="name" placeholder="例：山田 太郎"><p class="error">お名前を入力してください。</p></div>
-
-              <fieldset class="field" data-field="contactMethod">
-                <legend class="label">希望する連絡方法 <span class="required">必須</span></legend>
-                <div class="choice-grid"><div class="choice"><input type="radio" name="contactMethod" id="m1" value="電話"><label for="m1">電話</label></div><div class="choice"><input type="radio" name="contactMethod" id="m2" value="メール"><label for="m2">メール</label></div></div>
-                <p class="error">希望する連絡方法を選択してください。</p>
-              </fieldset>
-
-              <div class="row">
-                <div class="field" data-field="phone"><label class="label" for="phone">電話番号 <span class="optional">連絡方法に応じて必須</span></label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="例：09012345678"><p class="error">正しい電話番号を入力してください。</p></div>
-                <div class="field" data-field="email"><label class="label" for="email">メールアドレス <span class="optional">連絡方法に応じて必須</span></label><input id="email" name="email" type="email" autocomplete="email" placeholder="例：example@email.jp"><p class="error">正しいメールアドレスを入力してください。</p></div>
-              </div>
-
-              <div class="field"><label class="label" for="time">希望する連絡時間帯 <span class="optional">任意</span></label><select id="time" name="time"><option value="">希望なし</option><option>午前</option><option>12時から15時</option><option>15時から18時</option><option>その他</option></select></div>
-
-              <div class="privacy field" data-field="consent">
-                <details><summary>個人情報の取り扱いについて確認する</summary><p>ご入力いただいた情報は、お問い合わせへの回答、サービスのご案内、必要な連絡のために利用します。法令で認められる場合を除き、ご本人の同意なく第三者へ提供しません。</p></details>
-                <div class="consent"><input id="consent" name="consent" type="checkbox"><label for="consent">個人情報の取り扱いに同意します。</label></div>
-                <p class="error">個人情報の取り扱いへの同意が必要です。</p>
-              </div>
-
-              <div class="form-nav"><button class="btn secondary prev" type="button" data-prev="2">前へ戻る</button><button class="btn primary" id="reviewBtn" type="button">入力内容を確認する</button></div>
-            </section>
-
-            <section class="form-step" data-step="4">
-              <h3>入力内容をご確認ください</h3>
-              <p class="form-intro">内容に間違いがなければ、確認完了ボタンを押してください。</p>
+              <h3 tabindex="-1" id="reviewHeading">入力内容をご確認ください</h3>
+              <p class="form-intro">物件所在地とご連絡先に間違いがないかご確認ください。</p>
               <dl class="review" id="review"></dl>
-              <div class="form-nav"><button class="btn secondary" id="editBtn" type="button">入力内容を修正する</button><button class="btn primary" type="submit">入力確認を完了する</button></div>
-              <p class="disclaimer">このHTML単体では外部送信を行いません。公開時は既存サイトのメール送信処理へ接続してください。</p>
+              <div class="form-nav"><button class="btn secondary" id="editBtn" type="button">修正する</button><button class="btn primary" type="submit">入力確認を完了する</button></div>
+              <p class="disclaimer">現在、このフォームからは送信できません。ご相談はお電話（076-240-3339）で承ります。</p>
             </section>
           </form>
         </div>
@@ -808,7 +733,6 @@
       const mobileMenu = document.getElementById('mobileMenu');
       const form = document.getElementById('form');
       const steps = [...form.querySelectorAll('.form-step')];
-      const progress = [...document.querySelectorAll('.progress-item')];
       const success = document.getElementById('success');
       const review = document.getElementById('review');
       let current = 1;
@@ -836,102 +760,67 @@
       mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
       addEventListener('keydown', e => { if(e.key === 'Escape') closeMenu(); });
 
-      const checked = name => form.querySelector(`input[name="${name}"]:checked`)?.value || '';
+      const input = name => form.elements.namedItem(name);
       const field = name => form.querySelector(`[data-field="${name}"]`);
-      const invalid = (name, state) => field(name)?.classList.toggle('invalid', state);
-
-      function validate(step){
-        let ok = true;
-        if(step === 1){
-          const a = !!checked('consultationType');
-          const b = !!checked('situation');
-          invalid('consultationType', !a);
-          invalid('situation', !b);
-          ok = a && b;
+      const invalid = (name, state) => {
+        field(name).classList.toggle('invalid', state);
+        field(name).querySelector('input').setAttribute('aria-invalid', String(state));
+      };
+      const normalize = value => value.normalize('NFKC').trim();
+      function validate(){
+        const addressOk = !!input('address').value.trim();
+        const nameOk = !!input('name').value.trim();
+        const contact = normalize(input('contactInfo').value);
+        const phone = contact.replace(/[\s()（）−ー‐–—-]/g, '');
+        const contactOk = /^0\d{9,10}$/.test(phone) || /^\+81[1-9]\d{8,9}$/.test(phone) || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact);
+        invalid('address', !addressOk);
+        invalid('name', !nameOk);
+        invalid('contact', !contactOk);
+        if(!addressOk || !nameOk || !contactOk){
+          form.querySelector('.field.invalid input')?.focus();
+          return false;
         }
-        if(step === 2){
-          const a = !!checked('propertyType');
-          const b = !!form.prefecture.value;
-          const c = !!form.city.value.trim();
-          invalid('propertyType', !a);
-          invalid('prefecture', !b);
-          invalid('city', !c);
-          ok = a && b && c;
-        }
-        if(step === 3){
-          const name = form.name.value.trim();
-          const method = checked('contactMethod');
-          const phone = form.phone.value.replace(/\D/g,'');
-          const email = form.email.value.trim();
-          const phoneOk = /^0\d{9,10}$/.test(phone);
-          const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-          const phoneError = method === '電話' ? !phoneOk : !!phone && !phoneOk;
-          const emailError = method === 'メール' ? !emailOk : !!email && !emailOk;
-          invalid('name', !name);
-          invalid('contactMethod', !method);
-          invalid('phone', phoneError);
-          invalid('email', emailError);
-          invalid('consent', !form.consent.checked);
-          ok = !!name && !!method && !phoneError && !emailError && form.consent.checked;
-        }
-        if(!ok){
-          const first = form.querySelector('.field.invalid input,.field.invalid select,.field.invalid textarea');
-          first?.focus({preventScroll:true});
-          first?.closest('.field')?.scrollIntoView({behavior:'smooth',block:'center'});
-        }
-        return ok;
+        return true;
       }
-
       function show(step){
         current = step;
         steps.forEach(s => s.classList.toggle('active', Number(s.dataset.step) === step));
-        progress.forEach((p,i) => {
-          const n = i + 1;
-          p.classList.toggle('active', step < 4 && n === step);
-          p.classList.toggle('done', step === 4 || n < step);
-        });
-        document.getElementById('contact').scrollIntoView({behavior:'smooth',block:'start'});
+        if(step === 2) document.getElementById('reviewHeading').focus();
+        else input('address').focus();
       }
-
-      form.querySelectorAll('.next').forEach(b => b.addEventListener('click', () => {
-        if(validate(current)) show(Number(b.dataset.next));
-      }));
-      form.querySelectorAll('.prev').forEach(b => b.addEventListener('click', () => show(Number(b.dataset.prev))));
-      form.addEventListener('input', e => e.target.closest('.field')?.classList.remove('invalid'));
-      form.addEventListener('change', e => e.target.closest('.field')?.classList.remove('invalid'));
-
+      form.addEventListener('input', e => {
+        e.target.closest('.field')?.classList.remove('invalid');
+        e.target.removeAttribute('aria-invalid');
+        success.classList.remove('show');
+      });
       const row = (label,value) => {
         const div = document.createElement('div');
         div.className = 'review-row';
         const dt = document.createElement('dt');
         const dd = document.createElement('dd');
         dt.textContent = label;
-        dd.textContent = value || '未入力';
+        dd.textContent = value;
         div.append(dt,dd);
         return div;
       };
-
-      document.getElementById('reviewBtn').addEventListener('click', () => {
-        if(!validate(3)) return;
-        review.innerHTML = '';
-        [
-          ['相談内容',checked('consultationType')],
-          ['現在の状況',checked('situation')],
-          ['物件種別',checked('propertyType')],
-          ['物件所在地',[form.prefecture.value,form.city.value,form.address.value].filter(Boolean).join(' ')],
-          ['ご相談内容',form.details.value.trim() || '特記事項なし'],
-          ['お名前',form.name.value.trim()],
-          ['希望する連絡方法',checked('contactMethod')],
-          ['電話番号',form.phone.value.trim() || '未入力'],
-          ['メールアドレス',form.email.value.trim() || '未入力'],
-          ['希望する連絡時間帯',form.time.value || '希望なし']
-        ].forEach(v => review.append(row(v[0],v[1])));
-        show(4);
+      document.getElementById('editBtn').addEventListener('click', () => {
+        success.classList.remove('show');
+        show(1);
       });
-
-      document.getElementById('editBtn').addEventListener('click', () => show(3));
       form.addEventListener('submit', e => {
         e.preventDefault();
+        if(!validate()){ show(1); form.querySelector('.field.invalid input')?.focus(); return; }
+        if(current === 1){
+          review.replaceChildren();
+          [
+            ['物件所在地',input('address').value.trim()],
+            ['お名前',input('name').value.trim()],
+            ['電話番号 または メールアドレス',normalize(input('contactInfo').value)]
+          ].forEach(v => review.append(row(v[0],v[1])));
+          show(2);
+          return;
+        }
+        // 既存ファイルと同様、送信先は未設定。送信完了とは表示しない。
         success.classList.add('show');
         success.scrollIntoView({behavior:'smooth',block:'center'});
       });
